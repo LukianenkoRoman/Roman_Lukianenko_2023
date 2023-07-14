@@ -16,7 +16,7 @@ for(int i = 0; i < myArray.Length; i++)
 }
 
 Console.WriteLine("");
-Console.WriteLine("------------ Resolt: ------------");
+Console.WriteLine(" Resolt: ");
 
 for (int i = 0;i < myArray.Length; i++)
 {
