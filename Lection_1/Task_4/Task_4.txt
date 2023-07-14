@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Enter the first string: ");
+Console.WriteLine("Enter the first string: ");
 string str1 = Console.ReadLine();
 
 Console.WriteLine("Enter the second string: ");
