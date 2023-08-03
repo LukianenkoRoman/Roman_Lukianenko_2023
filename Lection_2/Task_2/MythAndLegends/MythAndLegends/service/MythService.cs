@@ -19,8 +19,17 @@ public class MythService : IStoryService
     public Story? GetMythByCode(string code)
     {
         return Storage.Myths.FirstOrDefault(x => x.StoryCode.Equals(code));
-    }                                                                           //Legend service methods was removed  
-                                                                                
+    }
+
+    public void AddLegend(Legend legend)
+    {
+    }
+
+    public Story? GetLegendByCode(string code)
+    {
+        return null;
+    }
+
     private string CreateCode(string name)
     {
         var code = $"{name.First()}{name.Last()}-{name.Length}";
