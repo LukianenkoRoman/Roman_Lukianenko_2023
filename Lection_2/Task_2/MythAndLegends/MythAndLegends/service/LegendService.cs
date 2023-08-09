@@ -21,19 +21,22 @@ public class LegendService : IStoryService
         return Storage.Legends.FirstOrDefault(x => x.StoryCode.Equals(code));
     }
 
-    public void AddMyth(Myth myth)
-    {
-    }
-
-    public Story? GetMythByCode(string code)
-    {
-        return null;
-    }
-
     private string CreateCode(string name)
     {
         var code = $"{name.First()}{name.Last()}-{name.Length}";
 
         return code;
+    }
+}
+
+private class MythService : IMythService             //class was splited to follow single responsibility    
+{   
+    public Story? GetMythByCode(string code)
+    {
+        return null;
+    }
+
+    public void AddMyth(Myth myth)
+    {
     }
 }

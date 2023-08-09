@@ -9,10 +9,10 @@ public class Display : IDisplay
     private readonly IStoryService _legendService;
     private readonly IStoryService _mythService;
 
-    public Display()
+    public Display(IStoryService _legendService, IStoryService _mythService) //now this class gets values with constructor to follow DIP
     {
-        _legendService = new LegendService();
-        _mythService = new MythService();
+        _legendService = LegendService();
+        _mythService = MythService();
     }
 
     public void DisplayByCode(string code)
