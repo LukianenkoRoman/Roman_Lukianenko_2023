@@ -4,13 +4,13 @@ using MythAndLegends.Services.Interface;
 
 namespace MythAndLegends.Services;
 
-public class LegendService : IStoryService
+public class LegendService : ILegendStoryService
 {
     public void AddLegend(Legend legend)
     {
         if (string.IsNullOrEmpty(legend.StoryCode))
         {
-            legend.StoryCode = CreateCode(legend.Name);
+            legend.StoryCode = CreateLegendCode(legend.Name);
         }
 
         Storage.Legends.Add(legend);
@@ -21,7 +21,7 @@ public class LegendService : IStoryService
         return Storage.Legends.FirstOrDefault(x => x.StoryCode.Equals(code));
     }
 
-    private string CreateCode(string name)
+    private string CreateLegendCode(string name)
     {
         var code = $"{name.First()}{name.Last()}-{name.Length}";
 
@@ -29,14 +29,3 @@ public class LegendService : IStoryService
     }
 }
 
-private class MythService : IMythService             //class was splited to follow single responsibility    
-{   
-    public Story? GetMythByCode(string code)
-    {
-        return null;
-    }
-
-    public void AddMyth(Myth myth)
-    {
-    }
-}

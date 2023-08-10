@@ -1,11 +1,9 @@
 namespace MythAndLegends.Data.Entity;
 
-public class Legend : Object
+public class Legend : Story
 {
     public string Object { get; set; }
-}
-    
-public class Legend : StroryTell
+
     public override void Tell()
     {
         Console.WriteLine($"Legend {StoryCode} - {Name} \n" +
@@ -14,5 +12,3 @@ public class Legend : StroryTell
         base.Tell();
     }
 }
-
-//Original child class wsa splited to follow the SRP reincipe

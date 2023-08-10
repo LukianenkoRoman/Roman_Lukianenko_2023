@@ -9,7 +9,7 @@ public class Display : IDisplay
     private readonly IStoryService _legendService;
     private readonly IStoryService _mythService;
 
-    public Display(IStoryService _legendService, IStoryService _mythService) //now this class gets values with constructor to follow DIP
+    public Display(ILegendStoryService _legendService, IMythStoryService _mythService) //now this class gets values with constructor to follow DIP
     {
         _legendService = LegendService();
         _mythService = MythService();
@@ -34,7 +34,7 @@ public class Display : IDisplay
         }
     }
 
-public class Dysplay : AddNewStory() //Here i decide split class to follow the single reponsibility pryniple  
+public class AddNewStory() : Dysplay  //Here i decide split class to follow the single reponsibility pryniple  
     {
         Console.WriteLine("Enter story type (myth/legend)");
         var input = Console.ReadLine();

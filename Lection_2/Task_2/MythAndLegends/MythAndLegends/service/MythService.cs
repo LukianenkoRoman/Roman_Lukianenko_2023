@@ -4,7 +4,7 @@ using MythAndLegends.Services.Interface;
 
 namespace MythAndLegends.Services;
 
-public class MythService : IStoryService
+public class MythService : IMythStoryService
 {   
     public void AddMyth(Myth myth)
     {
@@ -21,7 +21,7 @@ public class MythService : IStoryService
         return Storage.Myths.FirstOrDefault(x => x.StoryCode.Equals(code));
     }
 
-    private string CreateCode(string name)
+    public string CreateMythCode(string name)
     {
         var code = $"{name.First()}{name.Last()}-{name.Length}";
 
@@ -29,17 +29,6 @@ public class MythService : IStoryService
     }
 }
 
-private class LegendService : ILegendService             //class was splited to follow SRP
-{
-    public Story? GetLegendByCode(string code)
-    {
-        return null;
-    }
-
-    private void AddLegend(Legend legend)
-    {
-    }
-}
 
 
 
