@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ChallengeMe.CONFIDENT;
-using ChallengeMe.Tests;
+using ChallengeMe.Userservices;
+using ChallengeMe.Services;
+
 do
 {
     Console.WriteLine("Choose an option:");
@@ -16,22 +17,22 @@ do
             {
                 Console.WriteLine("Register your login and password:");
 
-                var food = new NotUsersAtAll(Console.ReadLine(), Console.ReadLine());
+                var user = new Users(Console.ReadLine(), Console.ReadLine());
             }
             break;
 
         case "2":
             {
-                var data = new WelcomeToTheFridge();
+                var data = new Logining();
 
                 Console.WriteLine("Enter your login and password:");
 
-                data.EnterTheFridge(Console.ReadLine(), Console.ReadLine());
+                data.Enter(Console.ReadLine(), Console.ReadLine());
 
 
                 Console.WriteLine("If you want logoff enter 'Exit'");
 
-                data.UnregisterFood(Console.ReadLine());
+                data.Exit(Console.ReadLine());
             }
             break;
         default:
