@@ -28,54 +28,9 @@ public class Display : IDisplay
         {
             myth.Tell();
         }
-        else if     //we cannot use "else" becouse we need to keep abilyty of adding finctional without refactoring                
+        else if                   
         {
             Console.WriteLine($"No myth or legend with code {code}");
         }
     }
 
-public class AddNewStory() : Dysplay  //Here i decide split class to follow the single reponsibility pryniple  
-    {
-        Console.WriteLine("Enter story type (myth/legend)");
-        var input = Console.ReadLine();
-
-        if (input == "legend")
-        {
-            Console.WriteLine("Enter name of the legend");
-            var name = Console.ReadLine();
-            Console.WriteLine("Enter object of the legend");
-            var storyObject = Console.ReadLine();
-            Console.WriteLine("Enter the story");
-            var storyText = Console.ReadLine();
-
-            var story = new Legend()
-            {
-                Name = name,
-                Object = storyObject,
-                Content = storyText
-            };
-
-            Storage.Legends.Add(story);
-        }
-        else if (input == "myth")
-        {
-            Console.WriteLine("Enter name of the myth");
-            var name = Console.ReadLine();
-            Console.WriteLine("Enter the story");
-            var storyText = Console.ReadLine();
-            Console.WriteLine("Enter some fact");
-            var fact = Console.ReadLine();
-
-            var story = new Myth()
-            {
-                Name = name,
-                Fact = fact,
-                Content = storyText
-            };
-
-            Storage.Myths.Add(story);
-        }
-
-        Console.WriteLine("Oops, wrong input");
-    }
-}

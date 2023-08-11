@@ -1,6 +1,6 @@
 namespace MythAndLegends.Data.Entity;
 
-public abstract class Story : Story 
+public abstract class Story 
 {
     public string StoryCode { get; set; }
     public string Name { get; set; }
