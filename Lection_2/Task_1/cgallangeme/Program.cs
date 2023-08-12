@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using ChallengeMe.Userservices;
+using ChallengeMe.DataStorage;
 using ChallengeMe.Services;
 
 do
@@ -23,7 +23,7 @@ do
 
         case "2":
             {
-                var data = new Logining();
+                var data = new Authenticate();
 
                 Console.WriteLine("Enter your login and password:");
 

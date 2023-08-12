@@ -1,16 +1,16 @@
-﻿using ChallengeMe.Userservices;
-using ChallengeMe.Services;
+﻿using cgallangeme.Services.Interface;
+using ChallengeMe.DataStorage;
 
-namespace ChallengeMe.Tests
+namespace ChallengeMe.Services
 {
-    public class WelcomeToTheFridge : IUserService
+    public class Authentication : ILoginService
     {
-        public void Logining(string String, string _String)
+        public void Authenticate(string String, string _String)
         {
             User[] notUsers = new User[2];
             bool UsersData = false;
 
-            foreach (var user in Users.data)
+            foreach (var user in Users.UsersList)
             {
                 if (user.GetName() == String && user.GetNumbers() == _String)
                 {
@@ -28,15 +28,5 @@ namespace ChallengeMe.Tests
             }
         }
 
-        public void Registration(string String, string _String)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Exiting(string String)
-        {
-            if (String == "Exit")
-                Users.data[0] = null;
-        }
     }
 }

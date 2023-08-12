@@ -1,24 +1,14 @@
-﻿using ChallengeMe.Userservices;
-using ChallengeMe.Services;
+﻿using ChallengeMe.DataStorage;
+using cgallangeme.Services.Interface;
 
 namespace ChallengeMe.Tests
 {
-    public class FirstTimeInTheFridge : IUserService
+    public class Register : IRegistrationService
     {
-        public void Logining(string String, string _String)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Registration(string String, string _String)
         {
-            Users.data.Append(new User(String, _String));
+            Users.UsersList.Append(new User(String, _String));
 
-        }
-
-        public void Exiting(string String)
-        {
-            throw new NotImplementedException();
         }
     }
 }
