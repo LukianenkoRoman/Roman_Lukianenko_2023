@@ -11,7 +11,7 @@
     {
         return Password;
     }
-    public string GetNumbers()
+    public string GetPassword()
     {
         return Name;
     }

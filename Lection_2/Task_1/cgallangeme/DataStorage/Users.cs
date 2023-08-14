@@ -2,17 +2,17 @@
 {
     internal class Users
     {
+        private static List<User> usersList = new List<User>();
+
         public Users(string login, string password)
         {
-            var UserData = new User(login, password);
-
-            UsersList[0] = UserData;
-
-            return;
+            User userData = new User(login, password);
+            
+            usersList.Add(userData);
         }
-        public static User[] UsersList = new User[1];
-    }
 
+        public static List<User> UsersList => usersList;
+    }
 }
 
 

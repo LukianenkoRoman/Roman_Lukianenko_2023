@@ -10,6 +10,8 @@ do
 
     string choice = Console.ReadLine();
 
+    bool AreLogined = false;
+
     switch (choice)
     {
 
@@ -23,22 +25,32 @@ do
 
         case "2":
             {
-                var data = new Authenticate();
+                var data = new Authentication();
+
+                AreLogined = true;
 
                 Console.WriteLine("Enter your login and password:");
 
-                data.Enter(Console.ReadLine(), Console.ReadLine());
-
-
-                Console.WriteLine("If you want logoff enter 'Exit'");
-
-                data.Exit(Console.ReadLine());
+                data.Authenticate(Console.ReadLine(), Console.ReadLine());
             }
             break;
         default:
             Console.WriteLine("Invalid choice.");
             break;
     }
+
+    if(AreLogined)
+    {
+        Console.WriteLine("If you want logoff enter 'Exit'");
+                string Comand = Console.ReadLine();
+
+                if (Comand == "Exit")
+                {
+                    var exiting = new Exiting();
+                    exiting.Exit(Comand);
+                }
+    }
+
 } while (true);
 
 

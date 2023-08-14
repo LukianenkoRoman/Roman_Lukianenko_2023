@@ -5,10 +5,17 @@ namespace ChallengeMe.Services
 {
  public class Exiting : IExitService
     {
-        public void Exit(string String)
+        public void Exit(string Exit)
         {
-            if (String == "Exit")
-            Users.UsersList[0] = null;
+            if (Exit == "Exit")
+            {
+                Console.WriteLine("You have been logoff");
+                Console.WriteLine("--------------------------");
+            }
+            else
+            {
+                Console.WriteLine("Uncorect comand");
+            }
         }
     }
 }
