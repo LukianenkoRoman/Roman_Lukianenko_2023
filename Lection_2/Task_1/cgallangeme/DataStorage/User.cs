@@ -1,19 +1,22 @@
 ﻿internal class User
 {
-    string Name; string Password;
-    public User(string String, string _String)
+    string _name; 
+    string _password;
+    
+    public User(string login, string password)
     {
-        Password = String;
-        Name = _String;
+        _name = login;
+        _password = password;
     }
 
     public string GetName()
     {
-        return Password;
+        return _name;
     }
+    
     public string GetPassword()
     {
-        return Name;
+        return _password;
     }
 }
 
