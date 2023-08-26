@@ -40,7 +40,7 @@ app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(    //Here i create default path for index page 
         name: "default",
-        pattern: "{controller=Home}/{action=Index}/{id?}");
+        pattern: "{controller=Home}/{action=PreLoger}/{id?}");
 
     endpoints.MapControllerRoute(    //And here i creating path to index with PreLoger
         name: "PreLoger",
