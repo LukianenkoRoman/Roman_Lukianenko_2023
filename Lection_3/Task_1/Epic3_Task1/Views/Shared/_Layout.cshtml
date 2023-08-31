@@ -1,8 +1,4 @@
-﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> SignInManager       //including singinmanager to rule the users login
-@inject UserManager<IdentityUser> UserManager           //including usermanager to rule the users
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,14 +12,9 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                @if (SignInManager.IsSignedIn(User))          //checking if user is logined
-                {
-                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>    //link leads to index
-                }
-                else
-                {
-                    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PreLoger">WebApplication1</a>   //link leads to PreLoger
-                }
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplication1</a>    
+                  
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,14 +22,7 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            @if (SignInManager.IsSignedIn(User))
-                            {
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="index">Home</a> //link leads to index
-                            } 
-                            else
-                            {
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="PreLoger">Home</a>  //link leads to PreLoger
-                            }
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="index">Home</a>  
                             </li>                        
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -65,20 +49,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-
-@if(SignInManager.IsSignedIn(User))           //checking if user is logined
-{
-    <div class="alert alert-danger mt-3">
-        @if (User.IsInRole("Admin"))          //checking if user is admin 
-        {
-            <p>You are admin!</p>
-        }
-        else
-        {
-            <p>You aren't admin!</p>
-        }
-    </div>
-}
-
 </html>
     
