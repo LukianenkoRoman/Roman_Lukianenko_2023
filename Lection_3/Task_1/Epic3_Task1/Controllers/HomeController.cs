@@ -35,7 +35,6 @@ namespace WebApplication1.Controllers
             return View();
         }
 
-        [AllowAnonymous]              //access to non autorisated users
         public IActionResult PreLoger()
         {
             return View();
