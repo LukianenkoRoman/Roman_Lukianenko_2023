@@ -4,13 +4,13 @@ namespace Skeleton.DAL.Entities
 {
     public class Test : BaseEntity
     {
-        public string Title { get; set; }        //propertyes     
+        public string Title { get; set; }         
         public string Description { get; set; }
 
-        public Guid? CreatedForUserID { get; set; }      //the unique object 
+        public Guid? CreatedForUserID { get; set; }       
 
 
-        public User? User { get; set; }      //reference to a User object
-        public ICollection<Question>? Questions { get; set; }   //question objects is associated with the test
+        public User? User { get; set; }     
+        public ICollection<Question>? Questions { get; set; }   
     }
 }

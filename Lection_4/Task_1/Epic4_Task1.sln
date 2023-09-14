@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Epic4_Task1", "SkeletonApi\Epic4_Task1.csproj", "{827490EA-B00A-419A-AECF-0007BE8EF2BA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Epic4_Task1", "Epic4_Task1\Epic4_Task1.csproj", "{1881E0AB-F33A-47E7-864A-FD60BF664AA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{827490EA-B00A-419A-AECF-0007BE8EF2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{827490EA-B00A-419A-AECF-0007BE8EF2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{827490EA-B00A-419A-AECF-0007BE8EF2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{827490EA-B00A-419A-AECF-0007BE8EF2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1881E0AB-F33A-47E7-864A-FD60BF664AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1881E0AB-F33A-47E7-864A-FD60BF664AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1881E0AB-F33A-47E7-864A-FD60BF664AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1881E0AB-F33A-47E7-864A-FD60BF664AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {212AA649-A6ED-4399-B030-C71A26579154}
+		SolutionGuid = {D75E937D-6101-41BC-9860-FC0F1DE0A887}
 	EndGlobalSection
 EndGlobal

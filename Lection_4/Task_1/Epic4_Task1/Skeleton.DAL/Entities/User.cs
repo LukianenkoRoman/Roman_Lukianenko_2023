@@ -2,12 +2,12 @@
 
 namespace Skeleton.DAL.Entities
 {
-    public class User : BaseEntity       //user class inheriting from the BaseEntity class
+    public class User : BaseEntity      
     {
-        public string Name { get; set; }              //properties
+        public string Name { get; set; }          
         public string Surname { get; set; }
         public string Password { get; set; }
 
-        public ICollection<Test>? Tests { get; set; }        //Collection associated with the user. "?" means thas value can be null
+        public ICollection<Test>? Tests { get; set; } 
     }
 }
